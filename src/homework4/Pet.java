@@ -1,6 +1,8 @@
 package homework4;
 
 public class Pet {
+
+    Family family;
     private String species;
     private String nickname;
     private int age;
@@ -11,8 +13,13 @@ public class Pet {
         System.out.println("Я кушаю!");
     }
 
+    public void setFamily(Family family) {
+        this.family = family;
+
+    }
+
     public void respond() {
-        System.out.printf("Привет, хозяин. Я - [%s]. Я соскучился!", this.nickname);
+        System.out.printf("Привет, хозяин. Я - [%s]. Я соскучился!\n", this.nickname);
     }
 
     public void foul() {
@@ -25,9 +32,9 @@ public class Pet {
 
     public String GetTrickLevel() {
         if (trickLevel > 50) {
-            return "очень хитрый";
-        } else if (trickLevel <= 50) return "не очень хитрый";
-        return "Не известно";
+            return "\nочень хитрый";
+        } else if (trickLevel <= 50) return "\nне очень хитрый";
+        return "\nНе известно";
     }
 
     public String[] GetHabits() {

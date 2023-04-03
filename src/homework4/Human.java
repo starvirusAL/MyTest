@@ -1,6 +1,8 @@
 package homework4;
 
 public class Human {
+
+    Family family;
     private String name;
     private String surname;
     private int year;
@@ -8,6 +10,8 @@ public class Human {
     private Pet pet;
     private Human mother;
     private Human father;
+
+
 
     private String[][] schedule;
 
@@ -23,13 +27,15 @@ public class Human {
         return year;
     }
     public String getName(){
-        return name;
+        return name+" "+surname;
     }
     public String getSurname(){
         return surname;
     }
+    public void setFamily(Family family) {
+        this.family = family;
 
-
+    }
 
 
     public Human() {
@@ -64,5 +70,6 @@ public class Human {
     public String toString() {
         return String.format("Human{name='%s', surname='%s', year=%s, iq=%s, mother='%s %s' , father='%s %s' , pet='%s'", name, surname, year, iq, mother.getName(), mother.getSurname(), father.getName(),father.getSurname(), pet);
     }
+
 
 }
