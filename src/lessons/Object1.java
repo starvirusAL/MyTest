@@ -1,4 +1,4 @@
-package Lessons5;
+package lessons;
 
 public class Object1 {
 

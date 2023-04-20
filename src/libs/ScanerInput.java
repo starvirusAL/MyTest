@@ -9,6 +9,7 @@ public class ScanerInput {
     public String nextLine() {
         return scanner.nextLine();
     }
+
     public int nextInt() {
         return scanner.nextInt();
     }
